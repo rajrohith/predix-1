@@ -1,0 +1,7 @@
+name: optima
+dependencies:
+- flask=0.10.1=py27_1
+- python=2.7.10=0
+- pip
+- pip:
+  - psycopg2
