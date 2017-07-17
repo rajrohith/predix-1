@@ -8,5 +8,4 @@ applications:
   buildpack: python_buildpack
   command: python flaskmain.py
   services:
-    - logstash
     - postgres

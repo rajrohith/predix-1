@@ -1,0 +1,30 @@
+DR_ID|DR_LoadTime|DR_Start|DR_End|DR_Current|PurposeName|PurposeDescription
+-1|2015-12-14 15:35:08.2030000|0001-01-01 00:00:00.0000000|9999-12-31 00:00:00.0000000|True|Unknown|Unknown
+2|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Acid|Type and amount to remove carbonates, cement and other debris from around the perforations and in fractures
+3|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Antifreeze|NULL
+4|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Anti-Sludge Additive|NULL
+5|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Base Carrier|Water, nitrogen, or other fracfluid/gas carrier of the chemicals
+6|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Biocide|To prevent the growth of bacteria in the well
+7|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Breaker|Added later in the fracstage to cause the enhanced gelling agent to break down into a simpler fluid so it can be readily removed from the wellbore without carrying back the sand/ proppantmaterial
+8|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Buffer|NULL
+9|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Clay Control|Clay Stabilizer or Clay Control such as potassium chloride to prevent swelling of clays
+10|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|CNF|
+11|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Corrosion Inhibitor|Such as N,n-dimethyl formamide, and oxygen scavengers, such as ammonium bisulfite, are used to prevent degradation of the steel well casing
+12|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Crosslinker|Increase viscosity to enhance the characteristics and ability of the gelling agent to transport the proppantmaterial. These compounds may contain boric acid or ethylene glycol
+13|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Defoamer|NULL
+14|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Flow Enhancer|NULL
+15|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Flow-Back Additive|NULL
+16|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Fluid Diverter|NULL
+17|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Fluid Loss Additive|NULL
+18|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Foaming Agent|NULL
+19|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Friction Reducer|Potassium chloride or polyacrylamide-based compounds, used to reduce tubular friction and subsequently reduce the pressure needed to pump fluid into the wellbore –makes “slickwater” slick
+20|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Gelling Agent|Gellant or Gelling Agent such as guar gum, may be used in small amounts to thicken the water-based solution to help transport the proppantmaterial
+21|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Iron Control|Iron Control or Iron Stabilizing  such as citric acid or hydrochloric acid, used to inhibit precipitation of iron compounds by keeping them in a soluble form
+22|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Non-Emulsifier|NULL
+23|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Parafin Inhibitor|NULL
+24|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Proppant|Material and amounts used to prop open created fractures
+25|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Resin Activator|NULL
+26|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Scale Inhibitor|Such as ethylene glycol, used to control the precipitation of certain carbonate and sulfate minerals
+27|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Solvent|NULL
+28|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Stabilizer|NULL
+29|2016-07-01 13:34:23.4069079|1900-01-01 00:00:00.0000000|9999-12-31 23:59:59.9999999|True|Surfactant|Reduces the fracturing fluid's surface tension which increases fluid recovery to eliminate formation damage and fracture conductivity damage

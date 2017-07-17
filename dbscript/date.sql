@@ -1,4 +1,5 @@
-CREATE TABLE IF NOT EXISTS public.date(
+DROP TABLE IF EXISTS public.temp_date;
+CREATE TABLE  public.temp_date(
                 DR_ID int NOT NULL primary key,
                 DR_LoadTime Timestamp(6) NOT NULL,
                 FullDate Timestamp(6) NULL,
@@ -25,3 +26,11 @@ CREATE TABLE IF NOT EXISTS public.date(
                 Date_String Varchar(100) NULL,
                 DateTime_ODBC Varchar(100) NULL
 );
+ commit;  
+SET client_encoding = 'ISO_8859_5';
+COPY public.temp_date FROM '/app/dbdata/Date_Table.txt' DELIMITER '|' NULL AS ''  CSV HEADER;
+commit;
+DROP TABLE IF EXISTS public.date;
+commit;
+ALTER TABLE temp_date RENAME TO date;
+commit;

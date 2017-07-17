@@ -21,33 +21,63 @@ port = int(os.getenv("PORT", 9099))
 
 if 'VCAP_SERVICES' in os.environ:
 	vcapdata= json.loads(os.getenv('VCAP_SERVICES'))
-	username=vcapdata['postgres'][0]['credentials']['username']
-	password=vcapdata['postgres'][0]['credentials']['password']
+#	username=vcapdata['postgres'][0]['credentials']['username']
+#	password=vcapdata['postgres'][0]['credentials']['password']
 	hostname=vcapdata['postgres'][0]['credentials']['uri']
-	dbinstance=vcapdata['postgres'][0]['credentials']['database']
+else:
+	hostname="postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable"	
+#	dbinstance=vcapdata['postgres'][0]['credentials']['database']
 
 @app.route('/')
-def hello_world():
+def file_service():
 	global message, conn
-	dbcreate("dbscript/date.sql",hostname)	
- 	return 'Hello World! I am instance ' + str(os.getenv("CF_INSTANCE_INDEX", 0) + hostname +"---"+message)
+	try:
+		for root,directory,files in os.walk("dbscript"):
+			message=message+"<br> In file "+str(files)+"</br>"
+			for filename in files:
+				
+				filepath = os.path.join(root, filename)
+				print(filepath)
+				message=message+"<br> In file "+str(filepath)+"</br>"
+				dbcreate(str(filepath),hostname)	
+	except Exception as e:
+		message=message+"<br> error:"+ str(e)+"</br>"
+		pass
+ 	return (hostname +"<br>---"+message)
+
+#def hello_world():
+#	global message, conn
+#	dbcreate("dbscript/date.sql",hostname)	
+# 	return 'Hello World! I am instance ' + str(os.getenv("CF_INSTANCE_INDEX", 0) + hostname +"---"+message)
 
 def dbConnect(uri):
 		global message, conn
 		print(uri)
 		try:
-			message="In OptimaDb class"
+			message=message+"In OptimaDb class</br>"
 			conn = psycopg2.connect(uri)
-		except:
-			message="Unable to connect to database"
+		except Exception as e:
+			message=message+"<br>Unable to connect to database"+str(e)+"</br>"
+			pass
 		return conn.cursor()	
 
 def dbcreate(filename,uri):
 	global message, conn
-	cur=dbConnect(uri)
-	cur.execute(open(filename,"r").read())
-	cur.close()
-	conn.commit()
+	try:
+		cur=dbConnect(uri)
+		print("----------------------")
+		sqlfile=open(filename,"r")
+		sqllines=sqlfile.read()
+		sqlcommands = sqllines.split(';')
+
+		for sqlstatement in sqlcommands:
+			print(sqlstatement)
+			cur.execute(sqlstatement)
+		cur.close()
+		conn.commit()
+	except Exception as e:
+		message=message+"<br> error:"+ str(e)+"</br>"
+		pass
 
 if __name__ == '__main__':
     # Run the app, listening on all IPs with our chosen port number
