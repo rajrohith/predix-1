@@ -1,5 +1,4 @@
-DROP TABLE IF EXISTS public.temp_dimsupplier;
-CREATE TABLE public.temp_dimsupplier(
+CREATE TEMP TABLE IF NOT EXISTS dimsupplier(
     dr_id integer NOT NULL,
     dr_loadtime timestamp(6) without time zone NOT NULL,
     dr_start timestamp(6) without time zone NOT NULL,
@@ -9,5 +8,3 @@ CREATE TABLE public.temp_dimsupplier(
     suppliercategory text COLLATE pg_catalog."default",
     CONSTRAINT dimsupplier_pkey PRIMARY KEY (dr_id)
 );
-commit;
-SET client_encoding = 'ISO_8859_5';

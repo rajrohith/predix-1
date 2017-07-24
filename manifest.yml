@@ -10,3 +10,4 @@ applications:
   services:
     - postgres
     - logstash
+    - blob

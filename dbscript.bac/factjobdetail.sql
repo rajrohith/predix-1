@@ -1,5 +1,5 @@
-CREATE TEMP TABLE IF NOT EXISTS factjobdetail
-(
+DROP TABLE IF EXISTS public.temp_factjobdetail;
+CREATE TABLE public.temp_factjobdetail(
     dr_loadtime timestamp(6) without time zone NOT NULL,
     dr_recordtime timestamp(6) without time zone NOT NULL,
     fk_date integer NOT NULL,
@@ -17,4 +17,6 @@ CREATE TEMP TABLE IF NOT EXISTS factjobdetail
     ingredienthfjobpercent numeric(22, 12),
     calcingredientmass numeric(18, 4),
     ingredientmassuom character varying(2) COLLATE pg_catalog."default" NOT NULL
-)
+);
+commit;
+SET client_encoding = 'ISO_8859_5';

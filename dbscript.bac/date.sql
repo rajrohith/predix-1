@@ -26,11 +26,5 @@ CREATE TABLE  public.temp_date(
                 Date_String Varchar(100) NULL,
                 DateTime_ODBC Varchar(100) NULL
 );
- commit;  
+commit;
 SET client_encoding = 'ISO_8859_5';
-COPY public.temp_date FROM '/app/dbdata/Date_Table.txt' DELIMITER '|' NULL AS ''  CSV HEADER;
-commit;
-DROP TABLE IF EXISTS public.date;
-commit;
-ALTER TABLE temp_date RENAME TO date;
-commit;

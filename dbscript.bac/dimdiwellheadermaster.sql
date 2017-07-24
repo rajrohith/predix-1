@@ -1,5 +1,5 @@
-CREATE TABLE IF NOT EXISTS public.dimdiwellheadermaster
-(
+DROP TABLE IF EXISTS public.temp_dimdiwellheadermaster;
+CREATE TABLE public.temp_dimdiwellheadermaster(
     dr_id integer NOT NULL DEFAULT ,
     dr_loadtime timestamp(6) without time zone NOT NULL,
     dr_start timestamp(6) without time zone NOT NULL,
@@ -27,3 +27,5 @@ CREATE TABLE IF NOT EXISTS public.dimdiwellheadermaster
     matchingresult text COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT dimdiwellheadermaster_pkey PRIMARY KEY (dr_id)
 );
+commit;
+SET client_encoding = 'ISO_8859_5';

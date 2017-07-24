@@ -2,3 +2,7 @@ Flask
 gunicorn
 json
 psycopg2
+requests
+tqdm
+boto
+urllib2

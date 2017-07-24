@@ -1,5 +1,5 @@
-REATE TEMP TABLE IF NOT EXISTS public.dimtrade
-(
+DROP TABLE IF EXISTS public.temp_dimtrade;
+CREATE TABLE public.temp_dimtrade(
     dr_id integer NOT NULL,
     dr_loadtime timestamp(6) without time zone NOT NULL,
     dr_start timestamp(6) without time zone NOT NULL,
@@ -12,4 +12,6 @@ REATE TEMP TABLE IF NOT EXISTS public.dimtrade
     isresincoated character varying(1) COLLATE pg_catalog."default",
     isartificial character varying(1) COLLATE pg_catalog."default",
     CONSTRAINT dimtrade_pkey PRIMARY KEY (dr_id)
-)
+);
+commit;
+SET client_encoding = 'ISO_8859_5';

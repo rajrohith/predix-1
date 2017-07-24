@@ -1,5 +1,5 @@
-CREATE TABLE IF NOT EXISTS public.factdisclosuredetail
-(
+DROP TABLE IF EXISTS public.temp_factdisclosuredetail;
+CREATE TABLE public.temp_factdisclosuredetail(
 "dr_loadtime" timestamp  with time zone NOT NULL,
  "dr_recordTime" timestamp with time zone NOT NULL,
  "fk_disclosure" integer NOT NULL,
@@ -18,3 +18,5 @@ CREATE TABLE IF NOT EXISTS public.factdisclosuredetail
 "calcTotalingredientmass" numeric(19, 2) NULL,
 "calcTotalingredientmassuom" character varying(5)  NULL
 );
+commit;
+SET client_encoding = 'ISO_8859_5';
